@@ -17,7 +17,7 @@ def draw_house(origin):
     
     house = turtle.Turtle()
     house.color("black")
-    house.pensize(3)
+    house.pensize(2)
     house.goto(origin)
     
     # Draw the base of the house
@@ -27,15 +27,26 @@ def draw_house(origin):
 
     # draw the roof
     house.penup()
-    house.goto(0, 150)
+    house.goto(-50, 100)
     house.pendown()
     house.color("red")
     house.begin_fill()  # start filling with color
     draw_triangle(house, 150)
     house.end_fill()  # end filling with color
+
+    # draw the door
+    house.penup()
+    house.goto(25, -50)
+    house.pendown()
+    house.color("brown")
+    house.begin_fill()
+    draw_square(house, 50)
+    house.end_fill()
         
+
+    
     wn.exitonclick()
 
 
 
-draw_house()
+draw_house(origin=(-50, -50))
