@@ -1,6 +1,6 @@
 import turtle
 
-def draw_spiral():
+def draw_rainbow_spiral():
     # window = wn
     wn = turtle.Screen()
     wn.bgcolor("lightblue")
